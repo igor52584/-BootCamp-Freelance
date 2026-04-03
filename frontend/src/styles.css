@@ -151,10 +151,71 @@ textarea {
   max-width: 760px;
 }
 
+.guest-home {
+  gap: 20px;
+}
+
+.member-home {
+  gap: 20px;
+}
+
+.guest-hero {
+  min-height: auto;
+}
+
+.guest-hero-card {
+  width: 100%;
+  max-width: 980px;
+  padding: 40px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(255, 122, 69, 0.16), transparent 34%),
+    radial-gradient(circle at 6% 84%, rgba(76, 124, 255, 0.16), transparent 30%),
+    var(--surface);
+}
+
+.member-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 14px;
+  padding: 36px;
+  background:
+    radial-gradient(circle at 10% 2%, rgba(255, 122, 69, 0.18), transparent 28%),
+    radial-gradient(circle at 88% 98%, rgba(96, 160, 255, 0.22), transparent 35%),
+    var(--surface);
+}
+
+.member-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4.5vw, 3.3rem);
+  line-height: 1.02;
+}
+
+.member-hero-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .hero-card h1 {
   font-size: clamp(2.5rem, 5vw, 5.2rem);
   line-height: 0.95;
   margin: 14px 0;
+}
+
+.hero-lead {
+  margin: 0;
+  max-width: 62ch;
+  color: #d5e0ec;
+  font-size: 1.06rem;
+}
+
+.guest-cta {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .eyebrow {
@@ -194,6 +255,30 @@ textarea {
   border-radius: 22px;
   padding: 20px;
   background: var(--surface-strong);
+}
+
+.guest-home .panel > .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.member-panel > .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.member-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.member-card h3 {
+  margin: 0;
+}
+
+.member-card .button {
+  width: fit-content;
 }
 
 .case-card {
@@ -299,6 +384,7 @@ textarea::placeholder {
   margin-left: auto;
   margin-right: auto;
   justify-self: center;
+  align-self: center;
   gap: 12px;
 }
 
@@ -312,6 +398,36 @@ textarea::placeholder {
 
 .muted-text {
   color: var(--muted);
+}
+
+.home-flow {
+  display: grid;
+  gap: 12px;
+}
+
+.home-flow p {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+}
+
+.member-flow p {
+  padding: 16px 18px;
+}
+
+.guest-final {
+  text-align: center;
+}
+
+.guest-final h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.guest-final .guest-cta {
+  justify-content: center;
 }
 
 .profile-form {
@@ -346,6 +462,14 @@ textarea::placeholder {
   }
 
   .hero-card {
+    padding: 28px;
+  }
+
+  .guest-hero-card {
+    padding: 28px;
+  }
+
+  .member-hero {
     padding: 28px;
   }
 
