@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../api";
 
 const initialState = {
@@ -14,9 +14,17 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function RegisterPage({ setUser }) {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [form, setForm] = useState(initialState);
   const [error, setError] = useState("");
   const [invalidFields, setInvalidFields] = useState([]);
+
+  useEffect(() => {
+    const role = searchParams.get("role");
+    if (role === "student" || role === "company") {
+      setForm((current) => ({ ...current, role }));
+    }
+  }, [searchParams]);
 
   function updateField(name, value) {
     setForm({ ...form, [name]: value });

@@ -36,7 +36,7 @@ export default function App() {
   return (
     <AppLayout user={user} setUser={setUser}>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage user={user} />} />
         <Route path="/login" element={user ? <Navigate to="/profile" replace /> : <LoginPage setUser={setUser} />} />
         <Route path="/register" element={user ? <Navigate to="/profile" replace /> : <RegisterPage setUser={setUser} />} />
         <Route path="/profile" element={user ? <ProfilePage user={user} setUser={setUser} /> : <Navigate to="/login" replace />} />

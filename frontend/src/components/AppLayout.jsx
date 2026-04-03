@@ -5,7 +5,7 @@ function AuthHeader({ user, onLogout }) {
     <header className="site-header">
       <div className="brand-block">
         <Link to="/" className="brand">
-          CaseShare
+          Lark
         </Link>
       </div>
       <nav className="nav-center">
@@ -39,7 +39,7 @@ function GuestHeader() {
     <header className="site-header">
       <div className="brand-block">
         <Link to="/" className="brand">
-          CaseShare
+          Lark
         </Link>
       </div>
       <nav className="nav-center">
@@ -63,7 +63,7 @@ function Footer({ user }) {
   return (
     <footer className="site-footer">
       <div>
-        <h3>CaseShare</h3>
+        <h3>Lark</h3>
         <p>Сервис, где компании публикуют кейсы, а студенты откликаются на них.</p>
       </div>
       <div>
